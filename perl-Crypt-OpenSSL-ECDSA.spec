@@ -15,6 +15,9 @@ BuildRequires: perl(Crypt::OpenSSL::Bignum)
 BuildRequires: perl(Crypt::OpenSSL::EC)
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl-devel
+BuildRequires: pkgconfig(libssl)
+
+
 
 %description
 This module provides an interface to the ECDSA (Elliptic Curve Digital
