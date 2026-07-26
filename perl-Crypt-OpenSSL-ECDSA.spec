@@ -1,15 +1,13 @@
 %define upstream_name    Crypt-OpenSSL-ECDSA
-%define upstream_version 0.06
-
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    2
+Version:    0.06
+Release:    3
 
 Summary:    Perl extension for OpenSSL ECDSA (Elliptic Curve Digital Signature Algorithm)
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Crypt/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Crypt/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(Crypt::OpenSSL::Bignum)
@@ -30,7 +28,7 @@ Export
     None by default.
 
 %prep
-%setup -qn %{upstream_name}-%{upstream_version}
+%setup -qn %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
